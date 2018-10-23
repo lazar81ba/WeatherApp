@@ -23,38 +23,48 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6i-8K-C4q">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
                                         <state key="normal" title="Poprzedni"/>
+                                        <connections>
+                                            <action selector="previewDayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PcN-6O-cpr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-h9-49n">
                                         <rect key="frame" x="231" y="0.0" width="70" height="30"/>
                                         <state key="normal" title="Następny"/>
+                                        <connections>
+                                            <action selector="nextDayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEh-7W-g3K"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VFo-s5-ENW">
-                                <rect key="frame" x="92.5" y="45" width="190" height="183.5"/>
+                                <rect key="frame" x="73" y="45" width="229" height="250.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bartomiej Łazarczyk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG5-Wp-qmg">
-                                        <rect key="frame" x="17.5" y="0.0" width="155" height="20.5"/>
+                                        <rect key="frame" x="37" y="0.0" width="155" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAZ-uq-HCK">
-                                        <rect key="frame" x="74.5" y="36.5" width="41.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxm-40-cfo">
+                                        <rect key="frame" x="102" y="36.5" width="25" height="30"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJX-qd-cy8">
-                                        <rect key="frame" x="0.0" y="73" width="190" height="74"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJX-qd-cy8">
+                                        <rect key="frame" x="0.0" y="82.5" width="229" height="122"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Weather condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMU-K3-nDB">
-                                        <rect key="frame" x="25" y="163" width="140" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTg-X2-ffE">
+                                        <rect key="frame" x="102" y="220.5" width="25" height="30"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="EJX-qd-cy8" firstAttribute="centerX" secondItem="VFo-s5-ENW" secondAttribute="centerX" id="J4X-mo-XZF"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gGk-N2-6kC">
                                 <rect key="frame" x="145.5" y="401" width="84.5" height="65.5"/>
@@ -124,7 +134,6 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="SC8-89-oso" firstAttribute="centerY" secondItem="f1O-2z-OBI" secondAttribute="centerY" id="6Vy-Ns-PUB"/>
                                     <constraint firstItem="SC8-89-oso" firstAttribute="width" secondItem="lC6-ck-taH" secondAttribute="width" id="VFo-dT-Wm0"/>
                                 </constraints>
                             </stackView>
@@ -220,6 +229,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="zxm-40-cfo" id="bMh-yU-FkL"/>
+                        <outlet property="maxTemperature" destination="Izb-G5-f4i" id="fHc-cS-W7S"/>
+                        <outlet property="minTemperature" destination="lC6-ck-taH" id="5k1-xy-Ce2"/>
+                        <outlet property="nextButton" destination="4hv-h9-49n" id="zUo-ev-mhl"/>
+                        <outlet property="pressure" destination="53C-uG-ajn" id="MQE-Zb-3gH"/>
+                        <outlet property="previewButton" destination="j6i-8K-C4q" id="C3k-Wt-NFi"/>
+                        <outlet property="rain" destination="8BV-SM-8Tz" id="ovX-fN-Huy"/>
+                        <outlet property="weatherImage" destination="EJX-qd-cy8" id="Ijf-Rq-Ju0"/>
+                        <outlet property="weatherState" destination="hTg-X2-ffE" id="IoJ-S1-P1Z"/>
+                        <outlet property="wind" destination="Fuf-of-J9T" id="lfC-wT-YJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
