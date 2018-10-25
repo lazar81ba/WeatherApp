@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7B7FE521819AF600E78B3C /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B7FE421819AF500E78B3C /* CityTableViewCell.swift */; };
 		3FA81FDE216F210F00196AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA81FDD216F210F00196AA0 /* AppDelegate.swift */; };
 		3FA81FE0216F210F00196AA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA81FDF216F210F00196AA0 /* ViewController.swift */; };
 		3FA81FE3216F210F00196AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA81FE1216F210F00196AA0 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F7B7FE421819AF500E78B3C /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		3FA81FDA216F210F00196AA0 /* weather_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA81FDD216F210F00196AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FA81FDF216F210F00196AA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				3FA81FDD216F210F00196AA0 /* AppDelegate.swift */,
 				3FA81FDF216F210F00196AA0 /* ViewController.swift */,
 				3FA81FE1216F210F00196AA0 /* Main.storyboard */,
+				3F7B7FE421819AF500E78B3C /* CityTableViewCell.swift */,
 				3FA81FE7216F211100196AA0 /* Assets.xcassets */,
 				3FA81FE9216F211100196AA0 /* LaunchScreen.storyboard */,
 				3FA81FEC216F211100196AA0 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				3FA81FE6216F210F00196AA0 /* weather_app.xcdatamodeld in Sources */,
 				3FA81FE0216F210F00196AA0 /* ViewController.swift in Sources */,
+				3F7B7FE521819AF600E78B3C /* CityTableViewCell.swift in Sources */,
 				3FA81FDE216F210F00196AA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

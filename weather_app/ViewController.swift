@@ -24,14 +24,14 @@ class ViewController: UIViewController {
     var dayIndex = 0
     let format = ".2"
 
+    var cities = [CityTableViewCell]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getApiData()
+        self.getApiData(urlAdress: "https://www.metaweather.com/api/location/44418/")
     }
     
-    func getApiData() {
-        let urlAdress = "https://www.metaweather.com/api/location/44418/"
+    func getApiData(urlAdress : String) {
         guard let url = URL(string: urlAdress) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -53,6 +53,13 @@ class ViewController: UIViewController {
             
             }.resume()
     }
+    
+    func initializeCities(urlAdresses : [String]) {
+        
+    }
+    
+    
+    
     
     func prepareImage(imgName : String) {
         let urlString = "https://www.metaweather.com/static/img/weather/png/64/" + imgName + ".png"
