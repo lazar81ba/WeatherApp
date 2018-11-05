@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     var dayIndex = 0
     let format = ".2"
 
-    var cities = [CityTableViewCell]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
