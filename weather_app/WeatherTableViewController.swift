@@ -12,20 +12,34 @@ class WeatherTableViewController: UITableViewController {
 
     var cities = [City]()
     let format = ".2"
+    var city : City?
     
     
-    private func loadCities(){
-        loadCity(url: "https://www.metaweather.com/api/location/44418/",name: "Londyn")
-        loadCity(url: "https://www.metaweather.com/api/location/523920/",name: "Warszawa")
-        loadCity(url: "https://www.metaweather.com/api/location/638242/",name: "Berlin")
+    public func loadCities(){
+        loadCity(woeid: "44418",name: "Londyn")
+        loadCity(woeid: "523920",name: "Warszawa")
+        loadCity(woeid: "638242",name: "Berlin")
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ViewControllerSegue") {
+            let vc = segue.destination as! ViewController
+            vc.city = city
+        }
+    }
+
     
-    private func loadCity(url : String, name: String) {
+    @IBAction func unwindToCityList(sender: UIStoryboardSegue) {
+        if let source = sender.source as? AddCityViewController, let sourceCity = source.readyCity {
+            loadCity(woeid: sourceCity.woeid, name: sourceCity.cityName)
+            tableView.reloadData()
+        }
+    }
+    
+    public func loadCity(woeid : String, name: String) {
         
-    
-        guard let url = URL(string: url) else { return}
+        guard let url = URL(string: "https://www.metaweather.com/api/location/" + woeid + "/") else { return}
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
@@ -40,7 +54,7 @@ class WeatherTableViewController: UITableViewController {
                         var temp = (((dayData["min_temp"] as? Double)?.format(f: self.format))?.description ?? "") + " °C/"
                         temp += (((dayData["max_temp"] as? Double)?.format(f: self.format))?.description ?? "") + " °C"
                         let state = dayData["weather_state_abbr"] as? String ?? "c"
-                        let city = City(name: name, temperature: temp, weatherState: state)
+                        let city = City(name: name, temperature: temp, weatherState: state, woeid : woeid)
                         self.cities += [city]
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
@@ -105,7 +119,12 @@ class WeatherTableViewController: UITableViewController {
         return cell
     }
 
-
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        city = cities[indexPath.row]
+        self.performSegue(withIdentifier: "ViewControllerSegue", sender: self)
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -20,15 +20,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    
     var weatherApiResponse : [[String : Any]] = []
     var dayIndex = 0
     let format = ".2"
-
+    var city:City?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getApiData(urlAdress: "https://www.metaweather.com/api/location/44418/")
+        
+        if let currentCity = city{
+            self.getApiData(urlAdress: "https://www.metaweather.com/api/location/" + currentCity.woeid + "/")
+            navigationBar.title = currentCity.name
+            self.title = currentCity.name
+        }
     }
+    
+
+    
     
     func getApiData(urlAdress : String) {
         guard let url = URL(string: urlAdress) else { return }

@@ -12,11 +12,13 @@ class City {
     var name : String
     var temperature : String
     var weatherState : String
+    var woeid : String
     
-    init(name: String, temperature : String, weatherState : String){
+    init(name: String, temperature : String, weatherState : String, woeid: String){
         self.name = name
         self.temperature = temperature
         self.weatherState = weatherState
+        self.woeid = woeid
     }
 
 }
