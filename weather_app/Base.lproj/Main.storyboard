@@ -81,7 +81,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9TO-tz-ssp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YLb-I8-BGa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3236" y="24.7376311844078"/>
+            <point key="canvasLocation" x="3223" y="338"/>
         </scene>
         <!--City-->
         <scene sceneID="tne-QT-ifu">
@@ -329,7 +329,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3236" y="1017"/>
+            <point key="canvasLocation" x="2297" y="1391"/>
         </scene>
         <!--Bartłomiej Łazarczyk-->
         <scene sceneID="mcE-bS-pRm">
@@ -408,7 +408,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBc-nQ-W78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="812"/>
+            <point key="canvasLocation" x="366" y="812"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dj0-zg-o1A">
@@ -426,7 +426,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEc-ha-wZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296.8000000000002" y="24.7376311844078"/>
+            <point key="canvasLocation" x="2297" y="338"/>
         </scene>
     </scenes>
 </document>
