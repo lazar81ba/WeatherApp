@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6CF5482194262F00337E44 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CF5472194262F00337E44 /* MapViewController.swift */; };
 		3F7B7FE521819AF600E78B3C /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B7FE421819AF500E78B3C /* CityTableViewCell.swift */; };
 		3FA81FDE216F210F00196AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA81FDD216F210F00196AA0 /* AppDelegate.swift */; };
 		3FA81FE0216F210F00196AA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA81FDF216F210F00196AA0 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6CF5472194262F00337E44 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3F7B7FE421819AF500E78B3C /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		3FA81FDA216F210F00196AA0 /* weather_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA81FDD216F210F00196AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				3FA81FEC216F211100196AA0 /* Info.plist */,
 				3FA81FE4216F210F00196AA0 /* weather_app.xcdatamodeld */,
 				8A250BE72191D10F00F79971 /* AddCityViewController.swift */,
+				3F6CF5472194262F00337E44 /* MapViewController.swift */,
 			);
 			path = weather_app;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				8A250BEE2191DE2F00F79971 /* AddCityTableViewCell.swift in Sources */,
 				3FA81FE6216F210F00196AA0 /* weather_app.xcdatamodeld in Sources */,
 				8A250BE82191D10F00F79971 /* AddCityViewController.swift in Sources */,
+				3F6CF5482194262F00337E44 /* MapViewController.swift in Sources */,
 				8A250BEC2191D6B600F79971 /* AddCity.swift in Sources */,
 				8A250BE42190C67C00F79971 /* WeatherTableViewController.swift in Sources */,
 				8A250BE62190C70B00F79971 /* City.swift in Sources */,

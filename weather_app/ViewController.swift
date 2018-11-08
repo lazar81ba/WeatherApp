@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rain: UITextField!
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+
     
 
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -40,6 +41,9 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func showLocation(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
     
     
     func getApiData(urlAdress : String) {

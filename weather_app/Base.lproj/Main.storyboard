@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-Mw-trk">
-                                <rect key="frame" x="0.0" y="193" width="375" height="474"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-Mw-trk">
+                                <rect key="frame" x="0.0" y="318.5" width="375" height="348.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCityTableViewCell" id="JUM-y0-fPM" customClass="AddCityTableViewCell" customModule="weather_app" customModuleProvider="target">
@@ -30,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C16-bf-Idj">
-                                                    <rect key="frame" x="15" y="12" width="112" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="204" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -44,16 +43,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9q-CD-oPo">
-                                <rect key="frame" x="62" y="79" width="255" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9q-CD-oPo">
+                                <rect key="frame" x="112.5" y="88.5" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQD-h2-DTB">
-                                <rect key="frame" x="164" y="133" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQD-h2-DTB">
+                                <rect key="frame" x="163.5" y="138.5" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="eI8-7S-Cps" eventType="touchDown" id="0nm-Lw-nhB"/>
@@ -61,6 +58,40 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ui2-Mw-trk" firstAttribute="leading" secondItem="Mdu-BA-6Hg" secondAttribute="leading" constant="350" id="4ls-ng-JID">
+                                <variation key="heightClass=compact-widthClass=compact" constant="350"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ui2-Mw-trk" firstAttribute="top" secondItem="LQD-h2-DTB" secondAttribute="bottom" constant="-110" id="7aL-SH-1r5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-110"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="LQD-h2-DTB" firstAttribute="centerX" secondItem="Dvw-gI-p84" secondAttribute="centerX" constant="-150" id="PuW-2d-BDu">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-150"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Mdu-BA-6Hg" firstAttribute="bottom" secondItem="ui2-Mw-trk" secondAttribute="bottom" id="cVc-4M-eTp">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ui2-Mw-trk" firstAttribute="trailing" secondItem="Mdu-BA-6Hg" secondAttribute="trailing" id="hxB-sI-MXd">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="LQD-h2-DTB" firstAttribute="centerY" secondItem="Dvw-gI-p84" secondAttribute="centerY" constant="-50" id="icV-oH-7C5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-50"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-180"/>
+                            </constraint>
+                            <constraint firstItem="L9q-CD-oPo" firstAttribute="centerX" secondItem="Dvw-gI-p84" secondAttribute="centerX" constant="-150" id="qOY-ws-ThP">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-150"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="L9q-CD-oPo" firstAttribute="centerY" secondItem="Dvw-gI-p84" secondAttribute="centerY" constant="-100" id="sHm-UL-kfy">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-230"/>
+                            </constraint>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mdu-BA-6Hg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add City" id="xRd-sr-A67">
@@ -81,12 +112,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9TO-tz-ssp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YLb-I8-BGa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3236" y="24.7376311844078"/>
+            <point key="canvasLocation" x="3248.7256371814096" y="325.60000000000002"/>
         </scene>
         <!--City-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -226,21 +256,6 @@
                                     <constraint firstItem="FmH-jH-UH7" firstAttribute="width" secondItem="Izb-G5-f4i" secondAttribute="width" id="ltN-R1-w4Q"/>
                                 </constraints>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBC-3T-C5I">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="City" largeTitleDisplayMode="never" id="RL7-o9-iqG">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Hk9-BS-ZeV">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KSq-78-0rz">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -313,12 +328,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="City" id="kxW-hK-Rs8"/>
+                    <navigationItem key="navigationItem" title="City" id="kxW-hK-Rs8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="bs8-ki-OA3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Location" style="plain" id="9rW-pb-NJf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yYM-Mc-hCG">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Location"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="date" destination="zxm-40-cfo" id="bMh-yU-FkL"/>
                         <outlet property="maxTemperature" destination="Izb-G5-f4i" id="fHc-cS-W7S"/>
                         <outlet property="minTemperature" destination="lC6-ck-taH" id="5k1-xy-Ce2"/>
-                        <outlet property="navigationBar" destination="RL7-o9-iqG" id="jd7-US-YAr"/>
+                        <outlet property="navigationBar" destination="kxW-hK-Rs8" id="gk5-YM-ua2"/>
                         <outlet property="nextButton" destination="4hv-h9-49n" id="zUo-ev-mhl"/>
                         <outlet property="pressure" destination="53C-uG-ajn" id="MQE-Zb-3gH"/>
                         <outlet property="previewButton" destination="j6i-8K-C4q" id="C3k-Wt-NFi"/>
@@ -328,8 +352,9 @@
                         <outlet property="wind" destination="Fuf-of-J9T" id="lfC-wT-YJu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3236" y="1017"/>
+            <point key="canvasLocation" x="2297" y="1161"/>
         </scene>
         <!--Bartłomiej Łazarczyk-->
         <scene sceneID="mcE-bS-pRm">
@@ -408,7 +433,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBc-nQ-W78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="812"/>
+            <point key="canvasLocation" x="463" y="812"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dj0-zg-o1A">
@@ -426,7 +451,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEc-ha-wZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296.8000000000002" y="24.7376311844078"/>
+            <point key="canvasLocation" x="2297" y="327"/>
         </scene>
     </scenes>
 </document>
