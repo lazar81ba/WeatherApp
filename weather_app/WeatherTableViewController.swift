@@ -49,12 +49,19 @@ class WeatherTableViewController: UITableViewController {
                 let json = try? JSONSerialization.jsonObject(with: data, options: [])
                 
                 if let dictionary = json as? [String:Any]{
+                    var latt : Double = 0.0
+                    var long : Double = 0.0
+                    if let latt_long = dictionary["latt_long"] as? String {
+                        var latt_long_arr = latt_long.components(separatedBy: ",")
+                        latt = Double(latt_long_arr[0]) ?? 0.0
+                        long = Double(latt_long_arr[1]) ?? 0.0
+                    }
                     if let weather_data = dictionary["consolidated_weather"] as? [[String:Any]]{
                         var dayData = weather_data[0]
                         var temp = (((dayData["min_temp"] as? Double)?.format(f: self.format))?.description ?? "") + " °C/"
                         temp += (((dayData["max_temp"] as? Double)?.format(f: self.format))?.description ?? "") + " °C"
                         let state = dayData["weather_state_abbr"] as? String ?? "c"
-                        let city = City(name: name, temperature: temp, weatherState: state, woeid : woeid)
+                        let city = City(name: name, temperature: temp, weatherState: state, woeid : woeid, longitude: long, latitude: latt)
                         self.cities += [city]
                         DispatchQueue.main.async {
                             self.tableView.reloadData()

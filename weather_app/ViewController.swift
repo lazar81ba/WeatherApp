@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rain: UITextField!
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+
     
 
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -28,6 +29,13 @@ class ViewController: UIViewController {
     var dayIndex = 0
     let format = ".2"
     var city:City?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowMapSegue") {
+            let vc = segue.destination as! MapViewController
+            vc.city = city
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +48,10 @@ class ViewController: UIViewController {
     }
     
 
+    
+    @IBAction func showLocation(_ sender: Any) {
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
+    }
     
     
     func getApiData(urlAdress : String) {
